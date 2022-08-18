@@ -13,9 +13,9 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static("public"));    // it is made to access static files(in public folder)
 
-//mongoose.connect("mongodb://localhost:27017/todolistDB");
+mongoose.connect("mongodb://localhost:27017/todolistDB");
 
-mongoose.connect("mongodb+srv://admin-Shivam:Leetcode-321@cluster0.betnu5h.mongodb.net/todolistDB");
+//mongoose.connect("mongodb+srv://admin-Shivam:Leetcode-321@cluster0.betnu5h.mongodb.net/todolistDB");
 
 const itemsSchema = new mongoose.Schema({
     name : String
